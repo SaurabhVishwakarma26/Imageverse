@@ -1,4 +1,5 @@
 import "@styles/globals.css";
+import Provider from "@components/Provider";
 
 export const metadata = {
   title: "Imageverse",
@@ -7,9 +8,11 @@ export const metadata = {
 
 const layout = ({ children }) => {
   return (
-    <html lang="en">
+    <html lang="en" style={{ backgroundColor: "#212121" }}>
       <body>
-        <main>{children}</main>
+        <Provider>
+          <main>{children}</main>
+        </Provider>
       </body>
     </html>
   );
